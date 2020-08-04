@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #05223a;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 70%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+h1 { margin-bottom: 30px; }
+
+header {
+  padding: 30px 0;
+  color: #fff;
+  font: bold 25px Arial; 
+  text-transform: capitalize;
+}
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+form .name { margin-top: 50px; }
+.photo input { border: none; }
+form ul input:focus { border-color: #7c7c7c; }
+
+form .photo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.photo input[type="submit"] { 
+  width: 40%; 
+  padding: 5px 2%;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #7c7c7c;
+  font: bold 15px Arial;  
+}
+
+form , .userDetails {
+  padding: 35px 5%;
+  border-radius: 20px;  
+  margin-top: 50px;
+  position: relative;
+  background-color: #fff;   
+}
+
+form ul {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+form ul li {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+form ul input { 
+  padding: 5px 1%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  font-size: 15px;
+  letter-spacing: 1px;
+  outline: none; 
+}
+
+form .error {
+  margin: 10px 0;
+  color: #f44336;
+  font-size: small;
+  text-transform: capitalize;
+}
+
+form input[type="submit"] , .userDetails input[type="button"] {
+  padding: 10px 5%;
+  border: none;
+  border-radius: 5px;
+  background-color: #0095a8;
+  color: #fff;
+  transition: all .5s ease;
+  outline: none; 
+}
+
+form input[type="submit"]:hover, .userDetails input[type="button"]:hover {
+  background-color: #13adc1;
+}
+
+form .photo {
+  width: 50%;
+  border-radius: 20px;
+  position: absolute;
+  top: -70px;
+  background-color: #fdd036;
+}
+
+.photo input[type="file"] {
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.photo img {
+  border: 5px solid #fff;
+  border-radius: 20px; 
+}
+
+form .photo li:nth-of-type(2) {
+  width: 50%;
+  margin: 10px 0px 0px 40px;
+}
+
+form .photo li:first-of-type { width: 25%; }
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  success page styling starts here
+=================================*/
+.userDetails { margin: 0; }
+.userDetails li { width: 45%; }
+.userDetails .small { text-transform: none; }
+
+.userDetails ul {
+  width: 50%;
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userDetails ul li span {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+/*=================================
+  success page styling ends here
+=================================*/
